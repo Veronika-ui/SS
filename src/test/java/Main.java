@@ -18,7 +18,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
     @BeforeAll
     static void setUpAll() {
-        System.setProperty("webdriver.chrome.driver", "artifacts/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "artifacts/chromedriver91.exe");
     }
 
     @BeforeEach
