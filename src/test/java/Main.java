@@ -1,3 +1,5 @@
+import java.util.concurrent.TimeUnit;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -35,37 +37,11 @@ import org.openqa.selenium.chrome.ChromeOptions;
     }
 
     @Test
-    void Test1() throws InterruptedException {
-        driver.get("https://google.com/mail");
-       driver.findElement(By.xpath("//input[@type='email']")).sendKeys("YakovlevaVeronika16", Keys.ENTER);
-       driver.findElement(By.xpath("//input[@type='password']")).sendKeys("Veronaya1", Keys.ENTER);
-
-
-
-
-
-
-
-
-        //   driver.findElement(By.xpath("//input[@class='aCsJod oJeWuf']")).sendKeys("veronika.yaka", Keys.ENTER);
-        //   driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
-
-        //  driver.findElement(By.xpath("//div[@class=Textinput Textinput_iconRight Textinput_view_floating-label Textinput_size_l")).sendKeys("veronika.yaka", Keys.ENTER);
-
-//
-//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//
-//
-//        driver.findElement(By.cssSelector("input[type=aria-label='Введите пароль']")).sendKeys("Veronaya1");
-
-
-        //driver.findElement(By.cssSelector("input[@type='password']")).sendKeys("Veronaya1");
-        //driver.findElement(By.cssSelector("input[type=password]")).sendKeys("Veronaya1");
-        // driver.findElement(cssSelector("[data-initial-dir]")).sendKeys("Veronaya1", Keys.ENTER);
-        //driver.findElement(cssSelector(".hDp5Db")).sendKeys("Veronaya1", Keys.ENTER);
-// Thread.sleep(10000);
-        //  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
+    void Test1()  throws InterruptedException {
+         driver.get("https://google.com/mail");
+         Thread.sleep(5000);
+         LoginPage lp = new LoginPage();
+         lp.login("YakovlevaVeronika16" , "Veronaya1");
     }
 
 }
